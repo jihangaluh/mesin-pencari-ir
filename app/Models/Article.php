@@ -9,6 +9,10 @@ class Article extends Model
 {
     use HasFactory;
 
-    // Tambahkan baris ini
-    protected $guarded = []; 
+    protected $guarded = [];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 }

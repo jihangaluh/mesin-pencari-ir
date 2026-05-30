@@ -3,8 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
 
-// Jalur untuk menampilkan halaman awal (kolom pencarian)
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Route halaman utama dan proses pencarian berita TF-IDF
+|
+*/
+
 Route::get('/', [SearchController::class, 'index']);
 
-// Jalur untuk memproses hasil pencarian saat tombol "Cari" ditekan
-Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/search', [SearchController::class, 'search'])
+    ->name('search');
